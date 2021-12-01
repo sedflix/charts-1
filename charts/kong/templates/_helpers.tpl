@@ -22,6 +22,8 @@ We truncate at 63 chars because some Kubernetes name fields are limited to this 
 {{- end -}}
 
 {{- define "kong.metaLabels" -}}
+app: {{ template "kong.fullName" . }}
+version: {{ .Chart.AppVersion | quote }}
 app.kubernetes.io/name: {{ template "kong.name" . }}
 helm.sh/chart: {{ template "kong.chart" . }}
 app.kubernetes.io/instance: "{{ .Release.Name }}"

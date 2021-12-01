@@ -8,6 +8,12 @@ automatically on upgrade. You can fix it by running:
 kubectl apply -f https://raw.githubusercontent.com/Kong/charts/main/charts/kong/crds/custom-resource-definitions.yaml
 ```
 
+## 2.6.2
+
+### Improvement
+
+* Add `app` and `version` label to pods.
+
 ## 2.6.1
 
 ### Fixed
